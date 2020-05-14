@@ -1,0 +1,295 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10330,        286]
+NotebookOptionsPosition[      9278,        249]
+NotebookOutlinePosition[      9624,        264]
+CellTagsIndexPosition[      9581,        261]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{
+  "\"\<http://homepage.lnu.se/staff/psvmsi/Lab20.html\>\"", ",", 
+   "\"\<Package\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(convert\\)\[NoBreak] in \
+\[NoBreak]\\!\\(convert[txt_String]\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7984525908443546`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Attributes", "::", "locked"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(convert\\)\[NoBreak] is locked. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Attributes/locked\\\", \
+ButtonNote -> \\\"Attributes::locked\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798452590869342*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(txt2vec\\)\[NoBreak] in \
+\[NoBreak]\\!\\(txt2vec[text_String]\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7984525908983097`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Attributes", "::", "locked"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(txt2vec\\)\[NoBreak] is locked. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Attributes/locked\\\", \
+ButtonNote -> \\\"Attributes::locked\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7984525909173126`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(vec2txt\\)\[NoBreak] in \
+\[NoBreak]\\!\\(vec2txt[vector_List]\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798452590943304*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(SetDelayed :: write\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7984525909692707`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Attributes", "::", "locked"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(vec2txt\\)\[NoBreak] is locked. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Attributes/locked\\\", \
+ButtonNote -> \\\"Attributes::locked\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7984525909862785`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(Attributes :: locked\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798452591004248*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "wrsym"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(getrsakeys\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/wrsym\\\", ButtonNote -> \
+\\\"Set::wrsym\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798452591118183*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "wrsym"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(carroll\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/wrsym\\\", \
+ButtonNote -> \\\"Set::wrsym\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.79845259114818*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"A", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"25", ",", "24", ",", "25", ",", "2", ",", "9"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", "5", ",", "0", ",", "17", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"5", ",", "7", ",", "15", ",", "8", ",", "19"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"21", ",", "18", ",", "19", ",", "5", ",", "13"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"5", ",", "3", ",", "8", ",", "15", ",", "19"}], "}"}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"cipher", " ", "=", " ", 
+  RowBox[{"hill", "[", 
+   RowBox[{"\"\<buymethirtystocks\>\"", ",", "A"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"cipherError", "=", 
+  RowBox[{"StringReplacePart", "[", 
+   RowBox[{"cipher", ",", "\"\<h\>\"", ",", 
+    RowBox[{"{", 
+     RowBox[{"6", ",", "6"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"B", "=", 
+  RowBox[{"Inverse", "[", 
+   RowBox[{"A", ",", 
+    RowBox[{"Modulus", "\[Rule]", "26"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"hill", "[", 
+  RowBox[{"cipherError", ",", " ", "B"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7984526359756393`*^9, 3.798452636402416*^9}, {
+  3.798452897974309*^9, 3.7984528991146593`*^9}, {3.79845300714834*^9, 
+  3.7984530312877564`*^9}, {3.798453081990263*^9, 3.7984531388420205`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"25", ",", "24", ",", "25", ",", "2", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "5", ",", "0", ",", "17", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "7", ",", "15", ",", "8", ",", "19"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"21", ",", "18", ",", "19", ",", "5", ",", "13"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "3", ",", "8", ",", "15", ",", "19"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.798452639042878*^9, 3.798452902328809*^9, 
+  3.7984531439870696`*^9}],
+
+Cell[BoxData["\<\"vdbntidhvqtoflcclyhe\"\>"], "Output",
+ CellChangeTimes->{3.798452639042878*^9, 3.798452902328809*^9, 
+  3.7984531439900546`*^9}],
+
+Cell[BoxData["\<\"vdbnthdhvqtoflcclyhe\"\>"], "Output",
+ CellChangeTimes->{3.798452639042878*^9, 3.798452902328809*^9, 
+  3.7984531439900546`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"the", " ", "6", "th", " ", "letter", " ", "becomes", " ", "h"}], 
+   ",", " ", 
+   RowBox[{"this", " ", "is", " ", "the", " ", "error"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.798453264411465*^9, 3.7984532796108165`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"6", ",", "19", ",", "5", ",", "25", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"25", ",", "18", ",", "5", ",", "0", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"21", ",", "0", ",", "17", ",", "15", ",", "23"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"13", ",", "14", ",", "16", ",", "15", ",", "14"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "3", ",", "0", ",", "4", ",", "23"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.798452639042878*^9, 3.798452902328809*^9, 
+  3.7984531439920535`*^9}],
+
+Cell[BoxData["\<\"buymeninetystocksxxx\"\>"], "Output",
+ CellChangeTimes->{3.798452639042878*^9, 3.798452902328809*^9, 
+  3.7984531439930525`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "the", " ", "plaintext", " ", "is", " ", "BUYMETHIRTYSTOCKSXXX", " ", "but",
+    " ", "it", " ", "becomes", " ", "after", " ", "the", " ", "error", " ", 
+   "buymeninetystocksxxx"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.7984532891963243`*^9, 3.798453323027049*^9}}]
+},
+WindowSize->{1280, 756},
+WindowMargins->{{Automatic, 131}, {Automatic, 113}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 156, 4, 31, "Input"],
+Cell[739, 28, 499, 10, 23, "Message"],
+Cell[1241, 40, 449, 9, 21, "Message"],
+Cell[1693, 51, 500, 10, 23, "Message"],
+Cell[2196, 63, 451, 9, 21, "Message"],
+Cell[2650, 74, 498, 10, 23, "Message"],
+Cell[3151, 86, 536, 11, 21, "Message"],
+Cell[3690, 99, 451, 9, 21, "Message"],
+Cell[4144, 110, 535, 11, 21, "Message"],
+Cell[4682, 123, 437, 10, 21, "Message"],
+Cell[5122, 135, 431, 9, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5590, 149, 1368, 32, 112, "Input"],
+Cell[6961, 183, 604, 15, 31, "Output"],
+Cell[7568, 200, 146, 2, 31, "Output"],
+Cell[7717, 204, 146, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7900, 211, 283, 6, 31, "Input"],
+Cell[8186, 219, 608, 15, 31, "Output"],
+Cell[8797, 236, 146, 2, 31, "Output"]
+}, Open  ]],
+Cell[8958, 241, 316, 6, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
