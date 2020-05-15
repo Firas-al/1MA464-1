@@ -1,0 +1,706 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     26006,        697]
+NotebookOptionsPosition[     23852,        627]
+NotebookOutlinePosition[     24350,        648]
+CellTagsIndexPosition[     24265,        643]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{
+  "\"\<http://homepage.lnu.se/staff/psvmsi/Lab20.html\>\"", ",", 
+   "\"\<Package\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(convert\\)\[NoBreak] in \
+\[NoBreak]\\!\\(convert[txt_String]\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798553374371537*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Attributes", "::", "locked"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(convert\\)\[NoBreak] is locked. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Attributes/locked\\\", \
+ButtonNote -> \\\"Attributes::locked\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7985533743835435`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(txt2vec\\)\[NoBreak] in \
+\[NoBreak]\\!\\(txt2vec[text_String]\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798553374411515*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Attributes", "::", "locked"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(txt2vec\\)\[NoBreak] is locked. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Attributes/locked\\\", \
+ButtonNote -> \\\"Attributes::locked\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7985533744435167`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(vec2txt\\)\[NoBreak] in \
+\[NoBreak]\\!\\(vec2txt[vector_List]\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798553374461504*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(SetDelayed :: write\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798553374489471*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Attributes", "::", "locked"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(vec2txt\\)\[NoBreak] is locked. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Attributes/locked\\\", \
+ButtonNote -> \\\"Attributes::locked\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798553374510459*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(Attributes :: locked\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.79855337452645*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "wrsym"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(getrsakeys\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/wrsym\\\", ButtonNote -> \
+\\\"Set::wrsym\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7985533746513777`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "wrsym"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(carroll\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/wrsym\\\", \
+ButtonNote -> \\\"Set::wrsym\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798553374686372*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Lab20`*"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["Lab20`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["Lab20`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["affinecrypt",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"affinecrypt", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["coinc",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"coinc", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["getelgamalciphertexts",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3798560589-3998218", {"getelgamalciphertexts", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["getrsapublickey",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3798560589-3998218", {"getrsapublickey", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["sawyer",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"sawyer", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["subciphertext",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"subciphertext", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["txt2vec",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"txt2vec", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["wrd1",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"wrd1", "Lab20`"}},
+          ButtonNote->"Lab20`"]},
+        {
+         ButtonBox["allshifts",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"allshifts", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["convert",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"convert", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["getelgamalpublickey",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3798560589-3998218", {"getelgamalpublickey", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["haddock",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"haddock", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["secretaffine",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"secretaffine", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["subst",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"subst", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["vec2txt",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"vec2txt", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["wrd2",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"wrd2", "Lab20`"}},
+          ButtonNote->"Lab20`"]},
+        {
+         ButtonBox["bigrams",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"bigrams", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["doubledfreq",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"doubledfreq", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["gethillciphertext",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3798560589-3998218", {"gethillciphertext", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["ham",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"ham", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["secrethill",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"secrethill", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["text2ascii",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"text2ascii", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["vec2word",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"vec2word", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["wrd3",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"wrd3", "Lab20`"}},
+          ButtonNote->"Lab20`"]},
+        {
+         ButtonBox["carroll",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"carroll", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["frequency",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"frequency", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["getinformationbits",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3798560589-3998218", {"getinformationbits", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["hammingweight",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"hammingweight", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["secretrsaciphertext",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3798560589-3998218", {"secretrsaciphertext", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["toblocks",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"toblocks", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["vigenere",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"vigenere", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["wrd4",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"wrd4", "Lab20`"}},
+          ButtonNote->"Lab20`"]},
+        {
+         ButtonBox["choose",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"choose", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["fromblocks",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"fromblocks", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["getmatrices",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"getmatrices", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["hill",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"hill", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["shift",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"shift", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["tptext",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"tptext", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["vigex",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"vigex", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["wrd5",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"wrd5", "Lab20`"}},
+          ButtonNote->"Lab20`"]},
+        {
+         ButtonBox["clarke",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"clarke", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["getaffineciphertext",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3798560589-3998218", {"getaffineciphertext", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["getrsakeys",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"getrsakeys", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["randomerrors",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"randomerrors", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["shiftcipher",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"shiftcipher", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["trigrams",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"trigrams", "Lab20`"}},
+          ButtonNote->"Lab20`"], 
+         ButtonBox["word2vec",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3798560589-3998218", {"word2vec", "Lab20`"}},
+          ButtonNote->"Lab20`"], ""}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.11875]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]], "Print", "InfoCell",
+ CellChangeTimes->{3.7985533892732306`*^9}],
+
+Cell[BoxData[
+ StyleBox["\<\"An RSA ciphertext.\"\>", "MSG"]], "Print", "PrintUsage",
+ CellTags->"Info3798560589-3998218"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"p", ",", "q", ",", "e"}], "}"}], "=", "getrsakeys"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<p=\>\"", ",", "p"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<q=\>\"", ",", "q"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<n=\>\"", ",", " ", "9776755521585602051"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<e=\>\"", ",", "e"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"rsa", "[", 
+      RowBox[{"x_", ",", "e_", ",", "n_"}], "]"}], ":=", 
+     RowBox[{"PowerMod", "[", 
+      RowBox[{"x", ",", "e", ",", "n"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"d", " ", "=", " ", 
+     RowBox[{"PowerMod", "[", 
+      RowBox[{"2711130174055970503", ",", 
+       RowBox[{"-", "1"}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"8219357", "-", "1"}], ")"}], 
+        RowBox[{"(", 
+         RowBox[{"1189479362143", "-", "1"}], ")"}]}]}], "]"}]}], ";", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"solution", " ", "for", " ", "a"}], ")"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<d=\>\"", ",", "d"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"msg", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"rsa", "[", 
+         RowBox[{"#", ",", "d", ",", "9776755521585602051"}], "]"}], "&"}], 
+       ",", "carroll"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<Result=\>\"", ",", 
+     RowBox[{"fromblocks", "[", 
+      RowBox[{"msg", ",", "9"}], "]"}]}], "]"}], 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"solution", " ", "for", " ", "b"}], ")"}], "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.7985599647106977`*^9, 3.7985599666625814`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"p=\"\>", "\[InvisibleSpace]", "8219357"}],
+  SequenceForm["p=", 8219357],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.7985599405850744`*^9, 3.7985599711320333`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"q=\"\>", "\[InvisibleSpace]", "1189479362143"}],
+  SequenceForm["q=", 1189479362143],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.7985599405850744`*^9, 3.798559971134032*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"n=\"\>", "\[InvisibleSpace]", "9776755521585602051"}],
+  SequenceForm["n=", 9776755521585602051],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.7985599405850744`*^9, 3.7985599711360307`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"e=\"\>", "\[InvisibleSpace]", "2711130174055970503"}],
+  SequenceForm["e=", 2711130174055970503],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.7985599405850744`*^9, 3.7985599711380424`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"d=\"\>", "\[InvisibleSpace]", "1234567"}],
+  SequenceForm["d=", 1234567],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.7985599405850744`*^9, 3.798559971141041*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Result=\"\>", 
+   "\[InvisibleSpace]", \
+"\<\"twasbrilligandtheslithytovesdidgyreandgimbleinthewabeallmimsyweretheborog\
+ovesandthemomerathsoutgrabexxxxxxxx\"\>"}],
+  SequenceForm[
+  "Result=", 
+   "twasbrilligandtheslithytovesdidgyreandgimbleinthewabeallmimsyweretheborogo\
+vesandthemomerathsoutgrabexxxxxxxx"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.7985599405850744`*^9, 3.7985599711430397`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{{3.798553462110109*^9, 3.7985534986957235`*^9}, 
+   3.798554596074492*^9, {3.7985579319690495`*^9, 3.798557932737612*^9}, 
+   3.798559913569487*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7985599255916348`*^9, 3.7985599279632835`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7985599246391473`*^9, 3.798559924677125*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7985599236477423`*^9, 3.7985599268349266`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.798559922824211*^9, 3.7985599228771505`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7985599218797503`*^9, 3.7985599219346895`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.798559918592594*^9, 3.7985599186545877`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.798559916548787*^9, 3.7985599166067543`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.798554609265978*^9, 3.79855461180653*^9}, {
+   3.798557873529343*^9, 3.798557907200159*^9}, {3.798557954224367*^9, 
+   3.798557983769537*^9}, {3.798558075682169*^9, 3.7985581703302717`*^9}, {
+   3.7985582586603174`*^9, 3.7985582741099854`*^9}, {3.798558309752597*^9, 
+   3.7985585295419946`*^9}, {3.7985585787690105`*^9, 3.798558603543599*^9}, {
+   3.7985586728582635`*^9, 3.7985586914925423`*^9}, {3.7985588938090897`*^9, 
+   3.7985589081259327`*^9}, 3.798559330688016*^9, {3.7985596180203896`*^9, 
+   3.7985596501897106`*^9}, 3.7985596840317965`*^9, {3.7985598633650894`*^9, 
+   3.798559934619465*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"p=\"\>", "\[InvisibleSpace]", "8219357"}],
+  SequenceForm["p=", 8219357],
+  Editable->False]], "Print",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.798558361063054*^9, 3.7985584066020117`*^9, 3.798558526502695*^9, 
+   3.7985586387675934`*^9, {3.798559623357499*^9, 3.7985596292891073`*^9}, 
+   3.798559686326992*^9, {3.7985598742458715`*^9, 3.7985599098325963`*^9}, 
+   3.798559943980158*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"q=\"\>", "\[InvisibleSpace]", "1189479362143"}],
+  SequenceForm["q=", 1189479362143],
+  Editable->False]], "Print",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.798558361063054*^9, 3.7985584066020117`*^9, 3.798558526502695*^9, 
+   3.7985586387675934`*^9, {3.798559623357499*^9, 3.7985596292891073`*^9}, 
+   3.798559686326992*^9, {3.7985598742458715`*^9, 3.7985599098345942`*^9}, {
+   3.798559944866654*^9, 3.798559946335497*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"n=\"\>", "\[InvisibleSpace]", "9776755521585602051"}],
+  SequenceForm["n=", 9776755521585602051],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.798558361063054*^9, 3.7985584066020117`*^9, 3.798558526502695*^9, 
+   3.7985586387675934`*^9, {3.798559623357499*^9, 3.7985596292891073`*^9}, 
+   3.798559686326992*^9, {3.7985598742458715`*^9, 3.7985599098365803`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"e=\"\>", "\[InvisibleSpace]", "2711130174055970503"}],
+  SequenceForm["e=", 2711130174055970503],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.798558361063054*^9, 3.7985584066020117`*^9, 3.798558526502695*^9, 
+   3.7985586387675934`*^9, {3.798559623357499*^9, 3.7985596292891073`*^9}, 
+   3.798559686326992*^9, {3.7985598742458715`*^9, 3.798559909839588*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"d=\"\>", "\[InvisibleSpace]", "1234567"}],
+  SequenceForm["d=", 1234567],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.798558361063054*^9, 3.7985584066020117`*^9, 3.798558526502695*^9, 
+   3.7985586387675934`*^9, {3.798559623357499*^9, 3.7985596292891073`*^9}, 
+   3.798559686326992*^9, {3.7985598742458715`*^9, 3.7985599098415766`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Result=\"\>", 
+   "\[InvisibleSpace]", \
+"\<\"twasbrilligandtheslithytovesdidgyreandgimbleinthewabeallmimsyweretheborog\
+ovesandthemomerathsoutgrabexxxxxxxx\"\>"}],
+  SequenceForm[
+  "Result=", 
+   "twasbrilligandtheslithytovesdidgyreandgimbleinthewabeallmimsyweretheborogo\
+vesandthemomerathsoutgrabexxxxxxxx"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.798558361063054*^9, 3.7985584066020117`*^9, 3.798558526502695*^9, 
+   3.7985586387675934`*^9, {3.798559623357499*^9, 3.7985596292891073`*^9}, 
+   3.798559686326992*^9, {3.7985598742458715`*^9, 3.7985599098435755`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{{3.798557525388833*^9, 3.7985575354141216`*^9}, {
+  3.7985576241126165`*^9, 3.798557755070838*^9}, {3.7985578326656275`*^9, 
+  3.7985578396117005`*^9}, {3.798557882217395*^9, 3.7985579045306816`*^9}}]
+},
+WindowSize->{1858, 1037},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3798560589-3998218"->{
+  Cell[15108, 385, 122, 2, 40, "Print",
+   CellTags->"Info3798560589-3998218"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3798560589-3998218", 24161, 637}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 156, 4, 31, "Input"],
+Cell[739, 28, 497, 10, 23, "Message"],
+Cell[1239, 40, 451, 9, 21, "Message"],
+Cell[1693, 51, 498, 10, 23, "Message"],
+Cell[2194, 63, 451, 9, 21, "Message"],
+Cell[2648, 74, 498, 10, 23, "Message"],
+Cell[3149, 86, 534, 11, 21, "Message"],
+Cell[3686, 99, 449, 9, 21, "Message"],
+Cell[4138, 110, 534, 11, 21, "Message"],
+Cell[4675, 123, 439, 10, 21, "Message"],
+Cell[5117, 135, 432, 9, 21, "Message"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5586, 149, 50, 1, 25, "Input"],
+Cell[CellGroupData[{
+Cell[5661, 154, 9444, 229, 174, "Print"],
+Cell[15108, 385, 122, 2, 40, "Print",
+ CellTags->"Info3798560589-3998218"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15279, 393, 2124, 60, 272, "Input"],
+Cell[CellGroupData[{
+Cell[17428, 457, 222, 5, 23, "Print"],
+Cell[17653, 464, 232, 5, 23, "Print"],
+Cell[17888, 471, 246, 5, 23, "Print"],
+Cell[18137, 478, 246, 5, 23, "Print"],
+Cell[18386, 485, 220, 5, 23, "Print"],
+Cell[18609, 492, 461, 11, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[19097, 507, 213, 3, 52, "Input"],
+Cell[19313, 512, 96, 1, 31, InheritFromParent],
+Cell[19412, 515, 94, 1, 31, InheritFromParent],
+Cell[19509, 518, 96, 1, 31, InheritFromParent],
+Cell[19608, 521, 94, 1, 31, InheritFromParent],
+Cell[19705, 524, 96, 1, 31, InheritFromParent],
+Cell[19804, 527, 94, 1, 31, InheritFromParent],
+Cell[19901, 530, 94, 1, 31, InheritFromParent],
+Cell[CellGroupData[{
+Cell[20020, 535, 653, 9, 31, "Input"],
+Cell[CellGroupData[{
+Cell[20698, 548, 471, 11, 23, "Print"],
+Cell[21172, 561, 507, 11, 23, "Print"],
+Cell[21682, 574, 419, 8, 23, "Print"],
+Cell[22104, 584, 417, 8, 23, "Print"],
+Cell[22524, 594, 395, 8, 23, "Print"],
+Cell[22922, 604, 634, 14, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[23583, 622, 265, 3, 52, InheritFromParent]
+}
+]
+*)
+
+(* End of internal cache information *)
