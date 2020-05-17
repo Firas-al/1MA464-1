@@ -1,0 +1,447 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15419,        438]
+NotebookOptionsPosition[     13977,        391]
+NotebookOutlinePosition[     14320,        406]
+CellTagsIndexPosition[     14277,        403]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{
+  "\"\<http://homepage.lnu.se/staff/psvmsi/Lab20.html\>\"", ",", 
+   "\"\<Package\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(convert\\)\[NoBreak] in \
+\[NoBreak]\\!\\(convert[txt_String]\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7987218247570505`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Attributes", "::", "locked"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(convert\\)\[NoBreak] is locked. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Attributes/locked\\\", \
+ButtonNote -> \\\"Attributes::locked\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7987218247730274`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(txt2vec\\)\[NoBreak] in \
+\[NoBreak]\\!\\(txt2vec[text_String]\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798721824805009*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Attributes", "::", "locked"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(txt2vec\\)\[NoBreak] is locked. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Attributes/locked\\\", \
+ButtonNote -> \\\"Attributes::locked\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7987218248229995`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"SetDelayed", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(vec2txt\\)\[NoBreak] in \
+\[NoBreak]\\!\\(vec2txt[vector_List]\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"SetDelayed::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7987218248569794`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(SetDelayed :: write\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798721824875969*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Attributes", "::", "locked"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(vec2txt\\)\[NoBreak] is locked. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Attributes/locked\\\", \
+ButtonNote -> \\\"Attributes::locked\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.798721824893958*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(Attributes :: locked\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7987218249109488`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "wrsym"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(getrsakeys\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/wrsym\\\", ButtonNote -> \
+\\\"Set::wrsym\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.79872182503088*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "wrsym"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(carroll\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/wrsym\\\", \
+ButtonNote -> \\\"Set::wrsym\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7987218250648603`*^9}]
+}, Open  ]],
+
+Cell["a)", "Text",
+ CellChangeTimes->{{3.7987240023727245`*^9, 3.7987240026255784`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"G", ",", "H"}], "}"}], "=", 
+   RowBox[{"ham", "[", "4", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "G", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Mod", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", 
+      "1", ",", "1", ",", "0", ",", "1"}], "}"}], ".", "G"}], ",", "2"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Mod", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+      "1", ",", "1", ",", "0", ",", "1"}], "}"}], ".", "G"}], ",", "2"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Mod", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+      "0", ",", "1", ",", "0", ",", "1"}], "}"}], ".", "G"}], ",", "2"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.798722714481744*^9, 3.7987227148775415`*^9}, {
+  3.7987230134307914`*^9, 3.798723030494855*^9}, {3.7987239467924943`*^9, 
+  3.7987239503994102`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", 
+      "1"},
+     {"0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", 
+      "1"},
+     {"0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1", 
+      "0"},
+     {"0", "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1", 
+      "1"},
+     {"0", "0", "0", "0", "1", "0", "0", "0", "0", "0", "0", "1", "0", "0", 
+      "1"},
+     {"0", "0", "0", "0", "0", "1", "0", "0", "0", "0", "0", "1", "0", "1", 
+      "0"},
+     {"0", "0", "0", "0", "0", "0", "1", "0", "0", "0", "0", "1", "0", "1", 
+      "1"},
+     {"0", "0", "0", "0", "0", "0", "0", "1", "0", "0", "0", "1", "1", "0", 
+      "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "0", "1", "1", "0", 
+      "1"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "1", "1", "1", 
+      "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1", "1", "1", 
+      "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.7987227167904253`*^9, 3.798723100490696*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", 
+   ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", "1"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7987227167904253`*^9, 3.7987231004956937`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", 
+   ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7987227167904253`*^9, 3.7987231004966927`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7987227167904253`*^9, 3.798723100497693*^9}]
+}, Open  ]],
+
+Cell["This is the output of the encoding using G.", "Text",
+ CellChangeTimes->{{3.7987239710096684`*^9, 3.7987239850686364`*^9}}],
+
+Cell["b)", "Text",
+ CellChangeTimes->{{3.798724018207675*^9, 3.798724018503522*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"MatrixForm", "[", "H", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Mod", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "1", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+      "0"}], "}"}], ".", "H"}], " ", ",", "2"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Mod", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", 
+       "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ".", "H"}], " ", ",", "2"}], "]"}], 
+  RowBox[{"(*", "corrected", "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Mod", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+      "1", ",", "1", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", 
+      "0"}], "}"}], ".", "H"}], " ", ",", "2"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Mod", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "1", ",", "1", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", 
+       "0"}], "}"}], ".", "H"}], " ", ",", "2"}], "]"}], 
+  RowBox[{"(*", "corrected", "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Mod", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+      "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", 
+      "1"}], "}"}], ".", "H"}], " ", ",", "2"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7987233809751434`*^9, 3.7987234777899437`*^9}, {
+  3.798723627576399*^9, 3.7987237176079693`*^9}, {3.7987241717467985`*^9, 
+  3.798724172639289*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "1", "1"},
+     {"0", "1", "0", "1"},
+     {"0", "1", "1", "0"},
+     {"0", "1", "1", "1"},
+     {"1", "0", "0", "1"},
+     {"1", "0", "1", "0"},
+     {"1", "0", "1", "1"},
+     {"1", "1", "0", "0"},
+     {"1", "1", "0", "1"},
+     {"1", "1", "1", "0"},
+     {"1", "1", "1", "1"},
+     {"1", "0", "0", "0"},
+     {"0", "1", "0", "0"},
+     {"0", "0", "1", "0"},
+     {"0", "0", "0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.798723481898595*^9, 3.798723663460914*^9, 
+  3.798723707662649*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "0", ",", "0", ",", "1"}], "}"}]], "Output",
+ CellChangeTimes->{3.798723481898595*^9, 3.798723663460914*^9, 
+  3.798723707666647*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.798723481898595*^9, 3.798723663460914*^9, 
+  3.798723707667646*^9}]
+}, Open  ]],
+
+Cell["\<\
+For the first result there is an error. The corrected word is the second \
+result.\
+\>", "Text",
+ CellChangeTimes->{{3.798724187287919*^9, 3.798724220055204*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "1", ",", "1", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.798723481898595*^9, 3.798723663460914*^9, 
+  3.798723707668646*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.798723481898595*^9, 3.798723663460914*^9, 
+  3.7987237076696453`*^9}],
+
+Cell["\<\
+Again, clearly there is an error, the second result is the corrected one.\
+\>", "Text",
+ CellChangeTimes->{{3.7987242288671694`*^9, 3.7987242471907015`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.798723481898595*^9, 3.798723663460914*^9, 
+  3.7987237076706443`*^9}],
+
+Cell["This word is a codeword with no errors.", "Text",
+ CellChangeTimes->{{3.7987242624220304`*^9, 3.7987242742942224`*^9}}]
+},
+WindowSize->{927, 1028},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 156, 4, 31, "Input"],
+Cell[739, 28, 499, 10, 23, "Message"],
+Cell[1241, 40, 451, 9, 21, "Message"],
+Cell[1695, 51, 498, 10, 23, "Message"],
+Cell[2196, 63, 451, 9, 21, "Message"],
+Cell[2650, 74, 500, 10, 23, "Message"],
+Cell[3153, 86, 534, 11, 21, "Message"],
+Cell[3690, 99, 449, 9, 21, "Message"],
+Cell[4142, 110, 537, 11, 21, "Message"],
+Cell[4682, 123, 436, 10, 21, "Message"],
+Cell[5121, 135, 434, 9, 21, "Message"]
+}, Open  ]],
+Cell[5570, 147, 88, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[5683, 152, 1168, 33, 112, "Input"],
+Cell[6854, 187, 1596, 38, 202, "Output"],
+Cell[8453, 227, 281, 6, 31, "Output"],
+Cell[8737, 235, 281, 6, 31, "Output"],
+Cell[9021, 243, 279, 6, 31, "Output"]
+}, Open  ]],
+Cell[9315, 252, 129, 1, 30, "Text"],
+Cell[9447, 255, 84, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[9556, 260, 1955, 50, 172, "Input"],
+Cell[11514, 312, 1045, 32, 266, "Output"],
+Cell[12562, 346, 182, 4, 31, "Output"],
+Cell[12747, 352, 182, 4, 31, "Output"]
+}, Open  ]],
+Cell[12944, 359, 172, 4, 30, "Text"],
+Cell[13119, 365, 182, 4, 31, "Output"],
+Cell[13304, 371, 184, 4, 31, "Output"],
+Cell[13491, 377, 167, 3, 30, "Text"],
+Cell[13661, 382, 184, 4, 31, "Output"],
+Cell[13848, 388, 125, 1, 30, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
