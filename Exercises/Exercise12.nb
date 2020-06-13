@@ -1,0 +1,355 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11932,        346]
+NotebookOptionsPosition[     11134,        315]
+NotebookOutlinePosition[     11477,        330]
+CellTagsIndexPosition[     11434,        327]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{
+  "\"\<http://homepage.lnu.se/staff/psvmsi/Lab20.html\>\"", ",", 
+   "\"\<Package\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Shank", "[", 
+     RowBox[{"g_", ",", "h_", ",", "p_"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"n", " ", "=", " ", 
+        RowBox[{"Ceiling", "[", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"p", "-", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"t", " ", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"PowerMod", "[", 
+           RowBox[{"g", ",", "r", ",", "p"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"r", ",", "0", ",", 
+            RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"c", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Mod", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"PowerMod", "[", 
+              RowBox[{"g", ",", 
+               RowBox[{
+                RowBox[{"-", "1"}], "*", "q", "*", "n"}], ",", "p"}], "]"}], 
+             "*", "h"}], ",", "p"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"q", ",", "0", ",", 
+            RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"intersection", "=", 
+        RowBox[{"Intersection", "[", 
+         RowBox[{"t", ",", "c"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"r", "=", " ", 
+        RowBox[{"Part", "[", 
+         RowBox[{
+          RowBox[{"Part", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Position", "[", 
+              RowBox[{"t", ",", 
+               RowBox[{"intersection", "[", 
+                RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "-", "1"}], ",", 
+            "1"}], "]"}], ",", "1"}], "]"}]}], "  ", ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", " ", "=", 
+        RowBox[{"Part", "[", 
+         RowBox[{
+          RowBox[{"Part", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Position", "[", 
+              RowBox[{"c", ",", 
+               RowBox[{"intersection", "[", 
+                RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "-", "1"}], ",", 
+            "1"}], "]"}], ",", "1"}], "]"}]}], " ", ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"x", "=", 
+        RowBox[{"r", "+", 
+         RowBox[{"q", "*", "n"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "x", "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+   ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{" ", "a", ")"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"p", ",", "g", ",", "h"}], "}"}], " ", "=", " ", 
+   RowBox[{"getelgamalpublickey", "[", "12", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"elgamalencrypt", "[", 
+    RowBox[{"m_", ",", "p_", ",", "g_", ",", "h_"}], "]"}], " ", ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"k", ",", "r", ",", "t"}], "}"}], ",", " ", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"SeedRandom", "[", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"k", " ", "=", " ", 
+       RowBox[{"RandomInteger", "[", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", 
+          RowBox[{"p", "-", "2"}]}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"r", " ", "=", " ", 
+       RowBox[{"PowerMod", "[", 
+        RowBox[{"g", ",", "k", ",", "p"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"t", " ", "=", " ", 
+       RowBox[{"Mod", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"PowerMod", "[", 
+           RowBox[{"h", ",", "k", ",", "p"}], "]"}], " ", "*", "m"}], ",", 
+         "p"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{"List", "[", 
+        RowBox[{"r", ",", "t"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"texta", " ", "=", " ", 
+   RowBox[{"toblocks", "[", 
+    RowBox[{"\"\<howaboutasecondbreakfast\>\"", ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ciphertext", " ", "=", " ", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"elgamalencrypt", "[", 
+       RowBox[{"#", ",", "p", ",", "g", ",", "h"}], "]"}], "&"}], ",", 
+     "texta"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.80104436007362*^9, 3.8010443605343575`*^9}, {
+   3.8010447303598285`*^9, 3.8010447543011675`*^9}, {3.801045580009821*^9, 
+   3.80104562064263*^9}, {3.801045770813269*^9, 3.801045777692374*^9}, {
+   3.801045809774454*^9, 3.801045838201227*^9}, {3.801045869853162*^9, 
+   3.8010458866315956`*^9}, {3.801046986488787*^9, 3.8010470085170593`*^9}, 
+   3.801047075506772*^9, {3.8010548540797586`*^9, 3.8010548861094866`*^9}, {
+   3.8010549720914125`*^9, 3.801055007811015*^9}, {3.8010550576335793`*^9, 
+   3.801055060625881*^9}, {3.8010553624145565`*^9, 3.8010555043258877`*^9}, {
+   3.8010555799195833`*^9, 3.8010556545646095`*^9}, {3.801055686589712*^9, 
+   3.801055705729699*^9}, {3.8010558521752243`*^9, 3.8010559393600616`*^9}, {
+   3.801055988911118*^9, 3.801055996763197*^9}, {3.8010560948633957`*^9, 
+   3.801056158680657*^9}, {3.8010563386292906`*^9, 3.8010563420752163`*^9}, {
+   3.8010564321471763`*^9, 3.8010564602594414`*^9}, {3.801056589291665*^9, 
+   3.8010566219920015`*^9}, {3.8010566862173243`*^9, 
+   3.8010567468529043`*^9}, {3.801056806131546*^9, 3.8010568139406595`*^9}, {
+   3.8010568649512777`*^9, 3.8010569065907593`*^9}, {3.8010569641512184`*^9, 
+   3.8010569884180307`*^9}, {3.8010570397119217`*^9, 
+   3.8010570398913517`*^9}, {3.801057146447616*^9, 3.801057158448735*^9}, {
+   3.801057228685089*^9, 3.801057255653697*^9}, {3.8010573044085264`*^9, 
+   3.8010573269426546`*^9}, {3.8010573575901647`*^9, 
+   3.8010573979971304`*^9}, {3.801057583377306*^9, 3.801057584331765*^9}, {
+   3.8010578780401435`*^9, 3.801057908556714*^9}}],
+
+Cell["\<\
+Here we have created the function for a) and saved the ciphertext in a \
+variable.\
+\>", "Text",
+ CellChangeTimes->{{3.8010579235411425`*^9, 3.8010579438725643`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.801044358505517*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{" ", "b", ")"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", "=", 
+     RowBox[{"Shank", "[", 
+      RowBox[{"g", ",", "h", ",", "p"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<a = \>\"", ",", " ", "a"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8010579536609535`*^9, 3.8010579550161786`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"a = \"\>", "\[InvisibleSpace]", "42290810"}],
+  SequenceForm["a = ", 42290810],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8010579562125072`*^9}]
+}, Open  ]],
+
+Cell["The output of the shank function is displayed here", "Text",
+ CellChangeTimes->{{3.801057969851736*^9, 3.8010579849591084`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{" ", "c", ")"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"elgamaldecrypt", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"r_", ",", "t_"}], "}"}], ",", "p_", ",", "a_"}], "]"}], " ", 
+     ":=", "\[IndentingNewLine]", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "m", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"tr", "=", 
+         RowBox[{
+          RowBox[{"PowerMod", "[", 
+           RowBox[{"r", ",", 
+            RowBox[{"-", "a"}], ",", "p"}], "]"}], "*", "t"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"m", " ", "=", 
+         RowBox[{"Mod", "[", 
+          RowBox[{"tr", ",", "p"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Return", "[", "m", "]"}], ";"}]}], "\[IndentingNewLine]", 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c1", ",", "c2"}], "}"}], "=", 
+     RowBox[{"getelgamalciphertexts", "[", "12", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"plaintext1", "=", 
+     RowBox[{"fromblocks", "[", 
+      RowBox[{
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"elgamaldecrypt", "[", 
+           RowBox[{"#", ",", "p", ",", "a"}], "]"}], "&"}], ",", "c1"}], 
+        "]"}], ",", "3"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<plaintext1 = \>\"", ",", " ", "plaintext1"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"plaintext2", "=", 
+     RowBox[{"fromblocks", "[", 
+      RowBox[{
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"elgamaldecrypt", "[", 
+           RowBox[{"#", ",", "p", ",", "a"}], "]"}], "&"}], ",", "c2"}], 
+        "]"}], ",", "3"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<plaintext2 = \>\"", ",", " ", "plaintext2"}], 
+    "]"}]}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"plaintext1 = \"\>", 
+   "\[InvisibleSpace]", \
+"\<\"howcomethattheplaintextsareidenticalwhentheciphertextsarenot\"\>"}],
+  SequenceForm[
+  "plaintext1 = ", 
+   "howcomethattheplaintextsareidenticalwhentheciphertextsarenot"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.801057994032908*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"plaintext2 = \"\>", 
+   "\[InvisibleSpace]", \
+"\<\"howcomethattheplaintextsareidenticalwhentheciphertextsarenot\"\>"}],
+  SequenceForm[
+  "plaintext2 = ", 
+   "howcomethattheplaintextsareidenticalwhentheciphertextsarenot"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.801057994033907*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Here we have created the function for c) and displayed the plaintexts.\
+\>", "Text",
+ CellChangeTimes->{{3.801058026010684*^9, 3.8010580447239933`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{" ", "d", ")"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.801058058457139*^9, 3.8010580585850887`*^9}}],
+
+Cell["\<\
+ We can have multiple ciphertexts because the same plaintext is encrypted \
+with random integers.\
+\>", "Text",
+ CellChangeTimes->{
+  3.8010581089923267`*^9, {3.801058426700985*^9, 3.8010584749874043`*^9}}]
+},
+WindowSize->{927, 1028},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 156, 4, 31, "Input"],
+Cell[717, 26, 6037, 146, 452, "Input"],
+Cell[6757, 174, 176, 4, 30, "Text"],
+Cell[6936, 180, 68, 1, 31, "Input"],
+Cell[CellGroupData[{
+Cell[7029, 185, 426, 12, 72, "Input"],
+Cell[7458, 199, 202, 5, 23, "Print"]
+}, Open  ]],
+Cell[7675, 207, 134, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[7834, 212, 2020, 58, 252, "Input"],
+Cell[CellGroupData[{
+Cell[9879, 274, 345, 9, 23, "Print"],
+Cell[10227, 285, 345, 9, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[10599, 298, 162, 3, 30, "Text"],
+Cell[10764, 303, 147, 3, 31, "Input"],
+Cell[10914, 308, 216, 5, 30, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
